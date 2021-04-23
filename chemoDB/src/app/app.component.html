@@ -1,0 +1,45 @@
+<div class="control-section">
+  <div class='control-wrapper' style='width: 250px; margin: 0 auto'>
+      <div style='padding-top: 35px;'>
+          <ejs-dropdownlist
+            #industriaList 
+            id='industria' 
+            [dataSource]='industria' 
+            [fields]='industriaFields' 
+            (change)='onChange1()' 
+            popupHeight='auto' 
+            [placeholder]='industriaWaterMark'
+          ></ejs-dropdownlist>
+      </div>
+      <div style='padding-top: 35px;'>
+          <ejs-dropdownlist 
+            #solucionList 
+            id='solucion' 
+            [dataSource]='solucion' 
+            [fields]='solucionFields' 
+            (change)='onChange2()' 
+            [placeholder]='solucionWaterMark' 
+            popupHeight='auto'
+            [enabled]='false'
+          ></ejs-dropdownlist>
+      </div>
+      <div style='padding-top: 35px;'>
+          <ejs-dropdownlist 
+            #propiedadList 
+            id='propiedad' 
+            [dataSource]='propiedad' 
+            [fields]='propiedadFields' 
+            [placeholder]='propiedadWaterMark' 
+            [enabled]='false' 
+            popupHeight='auto'
+          ></ejs-dropdownlist>
+      </div>
+      <div class="flex">
+        <button (click)="clear()">Limpiar</button>
+        <button disabled>---------------------</button>
+        <button (click)="clear()">Buscar</button>
+      </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
